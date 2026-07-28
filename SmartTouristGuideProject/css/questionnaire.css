@@ -1,0 +1,978 @@
+/* =======================================================
+   GOOGLE FONT
+======================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =======================================================
+   RESET
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#081b33;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* =======================================================
+   NAVBAR
+======================================================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+    padding:0 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(6,20,40,.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,215,0,.25);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+    color:#ffffff;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#d4af37;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#ffffff;
+    font-weight:500;
+    transition:.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color:#d4af37;
+}
+
+/* =======================================================
+   HERO
+======================================================= */
+
+.hero{
+    margin-top:75px;
+    height:200px;
+    background:
+        linear-gradient(rgba(5,18,38,.65),
+        rgba(5,18,38,.75)),
+        url("../images/Pasikuda.jpg")
+        center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-overlay{
+    width:90%;
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:42px;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:17px;
+    color:#f4f4f4;
+    line-height:1.7;
+}
+
+/* =======================================================
+   QUESTIONNAIRE SECTION
+======================================================= */
+
+.questionnaire-section{
+    padding:45px 8% 70px;
+}
+
+.questionnaire-container{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,215,0,.25);
+    border-radius:25px;
+    backdrop-filter:blur(18px);
+    padding:35px 40px;
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+}
+
+/* =======================================================
+   TITLE
+======================================================= */
+
+.main-title{
+    text-align:center;
+    font-size:34px;
+    color:#d4af37;
+    margin-bottom:35px;
+    font-weight:700;
+}
+
+/* =======================================================
+   PROGRESS BAR
+======================================================= */
+
+.progress-wrapper{
+    margin-bottom:40px;
+}
+
+.progress-wrapper p{
+    text-align:center;
+    margin-top:12px;
+    font-size:15px;
+    color:#dddddd;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+    background:rgba(255,255,255,.12);
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:20%;
+    height:100%;
+    background:linear-gradient(90deg,#d4af37,#ffd700);
+    border-radius:30px;
+    transition:0.4s ease;
+}
+
+/* =======================================================
+   QUESTION
+======================================================= */
+
+.question{
+    display:none;
+    animation:fadeIn .5s ease;
+}
+
+.question.active{
+    display:block;
+}
+
+.question-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.question-header span{
+    display:inline-block;
+    padding:6px 18px;
+    border-radius:30px;
+    background:#d4af37;
+    color:#081b33;
+    font-weight:600;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.question-header h2{
+    font-size:30px;
+    margin-bottom:10px;
+    color:#ffffff;
+}
+
+.question-header p{
+    color:#cccccc;
+    font-size:16px;
+}
+
+/* =======================================================
+   OPTION GRID
+======================================================= */
+
+.option-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* =======================================================
+   IMAGE CARDS
+======================================================= */
+
+.option-card{
+
+    position:relative;
+
+    background:#102948;
+
+    border:2px solid transparent;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.option-card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+/* Budget Image */
+.budget-img{
+    object-position:center 10%;
+}
+
+/* Standard Image */
+.standard-img{
+    object-position:center center;
+}
+
+/* Luxury Image */
+.luxury-img{
+    object-position:center 80%;
+}
+
+.option-content{
+
+    padding:18px;
+
+}
+
+.option-content h3{
+
+    color:#d4af37;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+.option-content p{
+
+    color:#dddddd;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/* =======================================================
+   CHECK ICON
+======================================================= */
+.check-icon{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:#ffd700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#081b33;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    opacity:0;
+
+    transform:scale(0);
+
+    transition:all .3s ease;
+
+    z-index:999;
+
+}
+
+
+/* =======================================================
+   CARD HOVER
+======================================================= */
+
+.option-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 15px 35px rgba(212,175,55,.30);
+
+}
+
+.option-card:hover img{
+
+    transform:scale(1.06);
+
+    transition:.4s;
+
+}
+
+/* =======================================================
+   SELECTED CARD
+======================================================= */
+
+.option-card.selected{
+
+    border-color:#ffd700;
+
+    box-shadow:0 0 20px rgba(255,215,0,.35);
+
+}
+
+.option-card.selected .check-icon{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* =======================================================
+   ANIMATION
+======================================================= */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =======================================================
+   ICON CARDS (QUESTION 2 & QUESTION 5)
+======================================================= */
+
+.icon-card{
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    min-height:260px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.icon-box{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#d4af37,#ffd700);
+
+    color:#081b33;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(212,175,55,.30);
+
+}
+
+.icon-card h3{
+
+    font-size:24px;
+
+    color:#d4af37;
+
+    margin-bottom:12px;
+
+}
+
+.icon-card p{
+
+    color:#dddddd;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* =======================================================
+   ICON CARD HOVER
+======================================================= */
+
+.icon-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 18px 40px rgba(212,175,55,.35);
+
+}
+
+.icon-card:hover .icon-box{
+
+    transform:scale(1.1) rotate(6deg);
+
+}
+
+/* =======================================================
+   SELECTED ICON CARD
+======================================================= */
+
+.icon-card.selected{
+
+    border:2px solid #ffd700;
+
+    background:#16385d;
+
+}
+
+.icon-card.selected .icon-box{
+
+    background:#ffd700;
+
+    color:#081b33;
+
+}
+
+/* =======================================================
+   NAVIGATION BUTTONS
+======================================================= */
+
+.navigation-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:50px;
+
+}
+
+.nav-btn{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:15px 35px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* Previous */
+
+.previous-btn{
+
+    background:#233f61;
+
+    color:white;
+
+}
+
+.previous-btn:hover:not(:disabled){
+
+    background:#355983;
+
+}
+
+/* Next */
+
+.next-btn{
+
+    background:linear-gradient(135deg,#d4af37,#ffd700);
+
+    color:#081b33;
+
+}
+
+.next-btn:hover:not(:disabled){
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(212,175,55,.40);
+
+}
+
+/* Disabled */
+
+.nav-btn:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+}
+
+/* =======================================================
+   FOOTER
+======================================================= */
+
+footer{
+
+    margin-top:60px;
+
+    padding:25px;
+
+    background:#051225;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,215,0,.20);
+
+}
+
+footer p{
+
+    color:#cccccc;
+
+    font-size:15px;
+
+    letter-spacing:.5px;
+
+}
+
+/* =======================================================
+   SCROLLBAR
+======================================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#081b33;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ffd700;
+
+}
+
+/* =======================================================
+   RESPONSIVE DESIGN
+======================================================= */
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .questionnaire-section{
+
+        padding:40px 5% 60px;
+
+    }
+
+    .option-grid{
+
+        gap:20px;
+
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .navbar{
+
+        padding:0 5%;
+
+    }
+
+    .hero{
+
+        height:180px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .main-title{
+
+        font-size:30px;
+
+    }
+
+    .question-header h2{
+
+        font-size:26px;
+
+    }
+
+    .option-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        height:auto;
+
+        padding:15px;
+
+    }
+
+    .navbar ul{
+
+        margin-top:15px;
+
+        gap:20px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        margin-top:120px;
+
+        height:170px;
+
+    }
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .questionnaire-container{
+
+        padding:25px;
+
+    }
+
+    .main-title{
+
+        font-size:26px;
+
+    }
+
+    .question-header h2{
+
+        font-size:23px;
+
+    }
+
+    .option-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .option-card img{
+
+        height:220px;
+
+    }
+
+    .navigation-buttons{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .nav-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .hero{
+
+        height:150px;
+
+    }
+
+    .hero h1{
+
+        font-size:24px;
+
+    }
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+    .main-title{
+
+        font-size:22px;
+
+    }
+
+    .question-header h2{
+
+        font-size:20px;
+
+    }
+
+    .option-content h3{
+
+        font-size:20px;
+
+    }
+
+    .option-content p{
+
+        font-size:14px;
+
+    }
+
+    .icon-box{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:32px;
+
+    }
+
+}
+
+/* =======================================================
+   SMOOTH TRANSITIONS
+======================================================= */
+
+.option-card,
+.icon-card,
+.nav-btn,
+.check-icon,
+.icon-box,
+.option-card img{
+
+    transition:all .35s ease;
+
+}
+
+/* =======================================================
+   FOCUS EFFECTS
+======================================================= */
+
+.option-card:focus{
+
+    outline:none;
+
+    border-color:#ffd700;
+
+}
+
+.nav-btn:focus{
+
+    outline:2px solid #ffd700;
+
+    outline-offset:3px;
+
+}
+
+/* =======================================================
+   SELECTION ANIMATION
+======================================================= */
+
+.option-card.selected{
+
+    animation:selectPop .35s ease;
+
+}
+
+@keyframes selectPop{
+
+    0%{
+
+        transform:scale(.95);
+
+    }
+
+    50%{
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =======================================================
+   GOLD GLOW EFFECT
+======================================================= */
+
+.option-card:hover .option-content h3,
+
+.icon-card:hover h3{
+
+    color:#ffd700;
+
+}
+
+/* =======================================================
+   IMAGE QUALITY
+======================================================= */
+
+.option-card img{
+
+    display:block;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+/* =======================================================
+   END OF FILE
+======================================================= */

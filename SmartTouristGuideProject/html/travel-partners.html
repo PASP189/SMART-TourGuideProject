@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VISIT LANKA | Travel Partners</title>
+
+    <link rel="stylesheet"
+          href="../css/travel-partners.css">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        VISIT LANKA
+
+    </div>
+
+    <ul>
+
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="destinations.html">Destinations</a></li>
+
+        <li><a class="active" href="#">Travel Partners</a></li>
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>
+
+            Luxury Travel Partners
+
+        </h1>
+
+        <p>
+
+            Explore carefully selected hotels,
+            travel agencies, transportation,
+            local guides and unforgettable
+            experiences based on the destinations
+            you selected.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= SELECTED DESTINATIONS ================= -->
+
+<section class="destination-box">
+
+    <h2>
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        Your Selected Destinations
+
+    </h2>
+
+    <div id="selectedDestinations"
+
+         class="selected-grid">
+
+    </div>
+
+</section>
+
+<!-- ================= HOTELS ================= -->
+
+<section class="category-section">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-hotel"></i>
+
+        <h2>
+
+            Premium Hotels
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        Carefully selected luxury hotels
+        available for your chosen destinations.
+
+    </p>
+
+    <div
+
+        id="hotelContainer"
+
+        class="partner-grid">
+
+    </div>
+
+</section>
+<!-- ================= TRAVEL AGENCIES ================= -->
+
+<section class="category-section">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-earth-asia"></i>
+
+        <h2>
+
+            Trusted Travel Agencies
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        Licensed travel agencies ready to make your journey smooth and memorable.
+
+    </p>
+
+    <div
+
+        id="agencyContainer"
+
+        class="partner-grid">
+
+    </div>
+
+</section>
+
+<!-- ================= VEHICLE RENTALS ================= -->
+
+<section class="category-section">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-car-side"></i>
+
+        <h2>
+
+            Vehicle Rentals
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        Choose comfortable transportation suitable for your adventure.
+
+    </p>
+
+    <div
+
+        id="rentalContainer"
+
+        class="partner-grid">
+
+    </div>
+
+</section>
+
+<!-- ================= LOCAL GUIDES ================= -->
+
+<section class="category-section">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-user-tie"></i>
+
+        <h2>
+
+            Local Tour Guides
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        Friendly and experienced local guides to enhance your travel experience.
+
+    </p>
+
+    <div
+
+        id="guideContainer"
+
+        class="partner-grid">
+
+    </div>
+
+</section>
+
+<!-- ================= EXPERIENCES ================= -->
+
+<section class="category-section">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-mountain-sun"></i>
+
+        <h2>
+
+            Experiences
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        Discover unforgettable experiences specially recommended for your selected destinations.
+
+    </p>
+
+    <div
+
+        id="experienceContainer"
+
+        class="partner-grid">
+
+    </div>
+
+</section>
+
+<!-- ================= TRIP SUMMARY ================= -->
+
+<section class="summary-section">
+
+    <h2>
+
+        <i class="fa-solid fa-suitcase-rolling"></i>
+
+        My Travel Plan
+
+    </h2>
+
+    <div class="summary-grid">
+
+        <div class="summary-card">
+
+            <i class="fa-solid fa-hotel"></i>
+
+            <h3>Hotels</h3>
+
+            <span id="hotelCount">0</span>
+
+        </div>
+
+        <div class="summary-card">
+
+            <i class="fa-solid fa-earth-asia"></i>
+
+            <h3>Agencies</h3>
+
+            <span id="agencyCount">0</span>
+
+        </div>
+
+        <div class="summary-card">
+
+            <i class="fa-solid fa-car-side"></i>
+
+            <h3>Rentals</h3>
+
+            <span id="rentalCount">0</span>
+
+        </div>
+
+        <div class="summary-card">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <h3>Guides</h3>
+
+            <span id="guideCount">0</span>
+
+        </div>
+
+        <div class="summary-card">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h3>Experiences</h3>
+
+            <span id="experienceCount">0</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTINUE BUTTON ================= -->
+
+<section class="continue-section">
+
+    <button id="continuePlanner">
+
+        Continue to Journey Planner
+
+        <i class="fa-solid fa-arrow-right-long"></i>
+
+    </button>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 VISIT LANKA | Smart Tourist Guide & Travel Planner
+
+    </p>
+
+</footer>
+
+<script src="../js/travel-partners.js"></script>
+
+</body>
+
+</html>

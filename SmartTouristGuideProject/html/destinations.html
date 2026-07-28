@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VISIT LANKA | Destinations</title>
+
+    <link rel="stylesheet"
+          href="../css/destinations.css">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        VISIT LANKA
+
+    </div>
+
+    <ul>
+
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+
+        <li><a href="travel-partners.html">Travel Services</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>
+
+        Explore Sri Lanka
+
+    </h1>
+
+    <p>
+
+        Discover breathtaking destinations,
+        unforgettable adventures,
+        and experiences waiting for you.
+
+    </p>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search destinations...">
+
+    <button>
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </button>
+
+</section>
+
+<!-- ================= RECOMMENDATION ================= -->
+
+<section class="recommend">
+
+    <div class="recommend-card">
+
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        <h2>
+
+            Not Sure Where To Go?
+
+        </h2>
+
+        <p>
+
+            Answer a few quick questions and discover
+            destinations recommended specially for you.
+
+        </p>
+
+        <a href="questionnaire.html">
+
+            Start Recommendation
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= FILTER ================= -->
+
+<section class="filter" id="recommendations">
+
+    <h2>
+
+        Browse All Destinations
+
+    </h2>
+
+    <div class="buttons">
+
+        <button class="filter-btn active">All</button>
+
+        <button class="filter-btn">Beach</button>
+
+        <button class="filter-btn">Wildlife</button>
+
+        <button class="filter-btn">History</button>
+
+        <button class="filter-btn">Nature</button>
+
+        <button class="filter-btn">Adventure</button>
+
+        <button class="filter-btn">Mountain</button>
+
+    </div>
+
+</section>
+
+<!-- ================= MY TRIP ================= -->
+
+<section class="trip-panel">
+
+    <div class="trip-left">
+
+        <h2>
+
+            <i class="fa-solid fa-suitcase-rolling"></i>
+
+            My Trip
+
+        </h2>
+
+        <p id="tripCount">
+
+            0 Destination Selected
+
+        </p>
+
+        <div id="selectedList">
+
+            <p class="empty-trip">
+
+                No destinations selected yet.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="trip-right">
+
+        <button
+            id="continueBtn"
+            disabled>
+
+            Continue to Travel Partners
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= DESTINATION CARDS START ================= -->
+
+<section class="cards">
+
+<!-- ================= SIGIRIYA ================= -->
+
+<div class="card">
+
+    <img src="../images/Sigiriya.jpg" alt="Sigiriya">
+
+    <div class="content">
+
+        <h3>Sigiriya</h3>
+
+        <p>
+
+            The world-famous Lion Rock Fortress,
+            a UNESCO World Heritage Site surrounded
+            by breathtaking landscapes.
+
+        </p>
+
+        <div class="tags">
+
+            <span>History</span>
+
+            <span>Nature</span>
+
+            <span>Photography</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Matale
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="sigiriya.html" class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Sigiriya">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= ELLA ================= -->
+
+<div class="card">
+
+    <img src="../images/Ella.jpg" alt="Ella">
+
+    <div class="content">
+
+        <h3>Ella</h3>
+
+        <p>
+
+            A peaceful mountain village known
+            for tea plantations, waterfalls and
+            the famous Nine Arch Bridge.
+
+        </p>
+
+        <div class="tags">
+
+            <span>Nature</span>
+
+            <span>Mountain</span>
+
+            <span>Hiking</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Badulla
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="ella.html"
+
+               class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Ella">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= MIRISSA ================= -->
+
+<div class="card">
+
+    <img src="../images/Mirissa.jpg" alt="Mirissa">
+
+    <div class="content">
+
+        <h3>Mirissa</h3>
+
+        <p>
+
+            Golden beaches,
+            whale watching and beautiful sunsets
+            make Mirissa one of Sri Lanka's
+            favourite destinations.
+
+        </p>
+
+        <div class="tags">
+
+            <span>Beach</span>
+
+            <span>Whale Watching</span>
+
+            <span>Surfing</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Matara
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="mirissa.html"
+
+               class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Mirissa">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= YALA ================= -->
+
+<div class="card">
+
+    <img src="../images/Yala.jpg" alt="Yala National Park">
+
+    <div class="content">
+
+        <h3>Yala National Park</h3>
+
+        <p>
+
+            Experience thrilling wildlife safaris
+            and spot leopards, elephants, bears,
+            crocodiles and hundreds of bird species.
+
+        </p>
+
+        <div class="tags">
+
+            <span>Wildlife</span>
+
+            <span>Safari</span>
+
+            <span>Adventure</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Hambantota
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="yala.html" class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Yala National Park">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= NUWARA ELIYA ================= -->
+
+<div class="card">
+
+    <img src="../images/Nuwara eliya.jpg" alt="Nuwara Eliya">
+
+    <div class="content">
+
+        <h3>Nuwara Eliya</h3>
+
+        <p>
+
+            Visit Sri Lanka's Little England,
+            surrounded by tea estates,
+            waterfalls and cool mountain air.
+
+        </p>
+
+        <div class="tags">
+
+            <span>Nature</span>
+
+            <span>Mountain</span>
+
+            <span>Tea Country</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Nuwara Eliya
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="nuwaraeliya.html"
+
+               class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Nuwara Eliya">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= GALLE FORT ================= -->
+
+<div class="card">
+
+    <img src="../images/Galle.jpg" alt="Galle Fort">
+
+    <div class="content">
+
+        <h3>Galle Fort</h3>
+
+        <p>
+
+            Walk through centuries of history
+            inside the Dutch colonial fort,
+            boutique streets and seaside walls.
+
+        </p>
+
+        <div class="tags">
+
+            <span>History</span>
+
+            <span>Culture</span>
+
+            <span>Photography</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Galle
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="gallefort.html"
+
+               class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Galle Fort">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= UNAWATUNA ================= -->
+
+<div class="card">
+
+    <img src="../images/Unawatuna.jpg" alt="Unawatuna">
+
+    <div class="content">
+
+        <h3>Unawatuna</h3>
+
+        <p>
+
+            Enjoy crystal-clear beaches,
+            coral reefs, snorkeling and
+            unforgettable tropical sunsets.
+
+        </p>
+
+        <div class="tags">
+
+            <span>Beach</span>
+
+            <span>Relaxation</span>
+
+            <span>Snorkeling</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Galle
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="unawatuna.html"
+
+               class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Unawatuna">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= ARUGAM BAY ================= -->
+
+<div class="card">
+
+    <img src="../images/Arugam Bay.jpg" alt="Arugam Bay">
+
+    <div class="content">
+
+        <h3>Arugam Bay</h3>
+
+        <p>
+
+            One of Asia's best surfing destinations
+            with beautiful beaches and
+            a vibrant coastal atmosphere.
+
+        </p>
+
+        <div class="tags">
+
+            <span>Beach</span>
+
+            <span>Surfing</span>
+
+            <span>Adventure</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Ampara
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="arugambay.html"
+
+               class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Arugam Bay">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+
+     <!-- ================= ANURADHAPURA ================= -->
+
+<div class="card">
+
+    <img src="../images/Anuradhapura.jpg" alt="Anuradhapura">
+
+    <div class="content">
+
+        <h3>Anuradhapura</h3>
+
+        <p>
+
+            Discover Sri Lanka's ancient capital,
+            home to magnificent stupas, sacred temples,
+            and the historic Sri Maha Bodhi tree.
+
+        </p>
+
+        <div class="tags">
+
+            <span>History</span>
+
+            <span>Culture</span>
+
+            <span>UNESCO</span>
+
+        </div>
+
+        <p class="location">
+
+            📍 Anuradhapura
+
+        </p>
+
+        <div class="card-buttons">
+
+            <a href="anuradhapura.html"
+
+               class="details-btn">
+
+                View Details
+
+            </a>
+
+            <button class="trip-btn"
+
+                    data-place="Anuradhapura">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+   
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 VISIT LANKA | Smart Tourist Guide & Travel Planner
+
+    </p>
+
+</footer>
+
+<script src="../js/destinations.js"></script>
+
+</body>
+
+</html>

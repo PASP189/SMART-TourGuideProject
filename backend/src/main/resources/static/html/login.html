@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Lanka | Secure Portal Access</title>
+    <!-- Links your authentication blocks directly to your unified master style definitions -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body-wrapper">
+
+    <!-- CENTRAL LUXURY AUTHENTICATION PANEL CARD -->
+    <main class="login-wrapper-card">
+        
+        <!-- BRAND LOGO IN FULL EMBOSSED METALLIC GOLD STYLE -->
+        <div class="auth-brand-logo">VISIT <span>LANKA</span></div>
+        <p class="auth-sub-heading">Smart Travel Planner Portal Authentication</p>
+
+        <!-- SECURE SYSTEM FORM DIRECTORY -->
+        <form class="auth-form" onsubmit="executeSecureAuthentication(event)">
+            
+            <div class="auth-input-group">
+                <label for="txtUser">User Identification Name / Email:</label>
+                <input type="text" id="txtUser" placeholder="Enter your system username..." required>
+            </div>
+
+            <div class="auth-input-group">
+                <label for="txtPass">Secure Encryption Password:</label>
+                <input type="password" id="txtPass" placeholder="Enter security passphrase..." required>
+            </div>
+
+            <!-- DYNAMIC SECURITY NOTICE PANEL -->
+            <div class="security-advisory-panel">
+                🛡️ Insured Session Tracking: SSL Encrypted Node Access.
+            </div>
+
+            <!-- ACTION BUTTON GRID SECTION (MATCHES REQ BUTTON MATRIX) -->
+            <div class="auth-action-grid">
+                <button type="submit" class="auth-submit-btn font-dark">Authorize & Enter</button>
+                <button type="button" class="auth-register-btn font-gold" onclick="navigateToRegisterPage()">Create New Account</button>
+            </div>
+
+            <div class="auth-footer-links">
+                <a href="#">Forgot Passphrase?</a>
+                <span style="color: var(--subdued-blue);">|</span>
+                <a href="#">System Help Utility</a>
+            </div>
+
+        </form>
+
+    </main>
+
+    <script>
+        // Simulating backend authentication loop parameters
+        function executeSecureAuthentication(event) {
+            event.preventDefault(); // Blocks default form page reloading actions
+            
+            let userField = document.getElementById('txtUser').value;
+            let passField = document.getElementById('txtPass').value;
+
+            // Basic validation check routine for simulation submission
+            if (userField.trim() !== "" && passField.length >= 4) {
+                alert("🔒 Access Granted! Generating user session tracking token...");
+                // Redirects securely to your main destination marketplace slideshow dashboard
+                window.location.href = "index.html"; 
+            } else {
+                alert("❌ Authentication Failure: Invalid identity keys or insecure passphrase.");
+            }
+        }
+
+        // Handles immediate interface state redirection to your sign-up form
+        function navigateToRegisterPage() {
+            window.location.href = "register.html";
+        }
+    </script>
+    <!-- INVISIBLE AUDIO LOOP PLAYER CORE LAYER -->
+<audio id="ambientAudioNode" loop src="calm-forest.mp3"></audio>
+
+<!-- SUBTLE AUDIO PLAYER INTERACTIVE CONTROL CONTAINER -->
+<div style="position: absolute; bottom: 25px; left: 30px; z-index: 100; display: flex; align-items: center; gap: 10px;">
+    <button type="button" id="btnAudioToggle" onclick="toggleCalmSystemAudio()" style="background: rgba(1, 10, 23, 0.75); border: 1px solid #dfb26c; color: #dfb26c; border-radius: 50%; width: 40px; height: 40px; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
+        🔇
+    </button>
+    <span style="font-size: 0.8rem; font-weight: bold; color: #dfb26c; letter-spacing: 0.5px; text-transform: uppercase; text-shadow: 0 2px 4px black;">
+        Ambient Sound Panel
+    </span>
+</div>
+
+<script>
+    // Handles toggling the audio track play states seamlessly
+    function toggleCalmSystemAudio() {
+        let player = document.getElementById('ambientAudioNode');
+        let button = document.getElementById('btnAudioToggle');
+        
+        if (player.paused) {
+            player.play().catch(err => console.log("Audio requires user click first."));
+            button.innerText = "🔊";
+            button.style.borderColor = "#00cbc6";
+            button.style.color = "#00cbc6";
+        } else {
+            player.pause();
+            button.innerText = "🔇";
+            button.style.borderColor = "#dfb26c";
+            button.style.color = "#dfb26c";
+        }
+    }
+</script>
+
+
+</body>
+</html>

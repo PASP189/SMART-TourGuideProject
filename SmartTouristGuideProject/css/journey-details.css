@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#081524;
+    color:white;
+    overflow-x:hidden;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 8%;
+
+    background:#09172a;
+
+    border-bottom:1px solid rgba(255,215,0,.15);
+}
+
+.logo{
+    font-size:34px;
+    font-weight:800;
+    color:white;
+}
+
+.logo span{
+    color:#FFD700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul a:hover{
+    color:#FFD700;
+}
+
+.hero{
+    height:280px;
+
+    background:
+    linear-gradient(rgba(8,21,36,.75),rgba(8,21,36,.85)),
+    url("../images/home.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.hero p{
+    width:70%;
+    margin:auto;
+    color:#ddd;
+    line-height:1.8;
+}
+
+.details-container{
+    width:90%;
+    margin:70px auto;
+}
+
+.summary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+    margin-top:35px;
+    margin-bottom:50px;
+}
+
+.summary-card{
+    background:#162844;
+    border:1px solid rgba(255,215,0,.15);
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    transition:.3s;
+}
+
+.summary-card:hover{
+    transform:translateY(-6px);
+    border-color:#FFD700;
+}
+
+.summary-card i{
+    font-size:38px;
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.summary-card h3{
+    margin-bottom:10px;
+}
+
+.itinerary,
+.partners{
+
+    background:#162844;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-top:40px;
+
+    border:1px solid rgba(255,215,0,.15);
+
+}
+
+.itinerary h2,
+.partners h2{
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.destination-item,
+.partner-item{
+    background:#243a5a;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:60px 0;
+}
+
+.action-buttons button{
+    padding:16px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:700;
+    transition:.3s;
+}
+
+#downloadBtn{
+    background:white;
+    color:#081524;
+}
+
+#finishBtn{
+    background:#FFD700;
+    color:#081524;
+}
+
+.action-buttons button:hover{
+    transform:translateY(-5px);
+}
+

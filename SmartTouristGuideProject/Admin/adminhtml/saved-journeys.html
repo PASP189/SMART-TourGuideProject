@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VISIT LANKA | Saved Journeys</title>
+
+<link rel="stylesheet" href="../adminCss/saved-journeys.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>VISIT <span>LANKA</span></h2>
+
+<p>Administrator Panel</p>
+
+</div>
+
+<ul class="menu">
+
+<li>
+
+<a href="admin-dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="manage-users.html">
+
+<i class="fa-solid fa-users"></i>
+
+Manage Users
+
+</a>
+
+</li>
+
+<li>
+
+<a href="manage-destinations.html">
+
+<i class="fa-solid fa-location-dot"></i>
+
+Manage Destinations
+
+</a>
+
+</li>
+
+<li>
+
+<a href="manage-partners.html">
+
+<i class="fa-solid fa-handshake"></i>
+
+Travel Partners
+
+</a>
+
+</li>
+
+<li>
+
+<a href="questionnaires.html">
+
+<i class="fa-solid fa-clipboard-question"></i>
+
+Questionnaires
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa-solid fa-route"></i>
+
+Saved Journeys
+
+</a>
+
+</li>
+
+<li>
+
+<a href="reviews.html">
+
+<i class="fa-solid fa-star"></i>
+
+Reviews
+
+</a>
+
+</li>
+
+<li>
+
+<a href="reports.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Reports
+
+</a>
+
+</li>
+
+<li>
+<a href="../html/login.html" id="logoutLink">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div>
+
+<h1>Saved Journeys</h1>
+
+<p>Manage User Saved Travel Plans</p>
+
+</div>
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="searchJourney"
+placeholder="Search Journey">
+
+</div>
+
+</header>
+
+<section class="overview">
+
+<div class="card">
+
+<h4>Total Journeys</h4>
+
+<h2 id="journeyCount">152</h2>
+
+</div>
+
+<div class="card">
+
+<h4>Completed</h4>
+
+<h2>48</h2>
+
+</div>
+
+<div class="card">
+
+<h4>Upcoming</h4>
+
+<h2>84</h2>
+
+</div>
+
+<div class="card">
+
+<h4>Cancelled</h4>
+
+<h2>20</h2>
+
+</div>
+
+</section>
+
+<section class="toolbar">
+
+<button id="exportJourneys">
+
+<i class="fa-solid fa-download"></i>
+
+Export Journeys
+
+</button>
+
+<button id="printJourneys">
+
+<i class="fa-solid fa-print"></i>
+
+Print
+
+</button>
+
+</section>
+
+<section class="table-section">
+
+<table class="journey-table">
+
+<thead>
+
+<tr>
+
+<th>User</th>
+
+<th>Journey Name</th>
+
+<th>Destination</th>
+
+<th>Budget</th>
+
+<th>Travel Date</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Nimal Perera</td>
+
+<td>Family Vacation</td>
+
+<td>Ella</td>
+
+<td>$320</td>
+
+<td>2026-06-12</td>
+
+<td>Upcoming</td>
+
+<td>
+
+<button class="view">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Kasun Silva</td>
+
+<td>Adventure Trip</td>
+
+<td>Sigiriya</td>
+
+<td>$450</td>
+
+<td>2026-05-28</td>
+
+<td>Completed</td>
+
+<td>
+
+<button class="view">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Amara Fernando</td>
+
+<td>Beach Holiday</td>
+
+<td>Mirissa</td>
+
+<td>$280</td>
+
+<td>2026-07-03</td>
+
+<td>Upcoming</td>
+
+<td>
+
+<button class="view">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div class="modal" id="journeyModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h2>Journey Details</h2>
+
+<span class="close">&times;</span>
+
+</div>
+
+<div class="details-container">
+
+<div class="detail-box">
+
+<h3>User Information</h3>
+
+<p><strong>Name :</strong> <span id="journeyUser">Nimal Perera</span></p>
+
+<p><strong>Email :</strong> <span id="journeyEmail">nimal@gmail.com</span></p>
+
+<p><strong>Journey :</strong> <span id="journeyName">Family Vacation</span></p>
+
+<p><strong>Status :</strong> <span id="journeyStatus">Upcoming</span></p>
+
+</div>
+
+<div class="detail-box">
+
+<h3>Journey Summary</h3>
+
+<p><strong>Destination :</strong> <span id="journeyDestination">Ella</span></p>
+
+<p><strong>Budget :</strong> <span id="journeyBudget">$320</span></p>
+
+<p><strong>Travel Date :</strong> <span id="journeyDate">2026-06-12</span></p>
+
+<p><strong>Duration :</strong> <span id="journeyDuration">5 Days</span></p>
+
+</div>
+
+</div>
+
+<div class="detail-box">
+
+<h3>Selected Destinations</h3>
+
+<ul class="destination-list">
+
+<li>✔ Nine Arches Bridge</li>
+
+<li>✔ Little Adam's Peak</li>
+
+<li>✔ Ravana Falls</li>
+
+<li>✔ Ella Rock</li>
+
+<li>✔ Flying Ravana Zipline</li>
+
+</ul>
+
+</div>
+
+<div class="detail-box">
+
+<h3>Estimated Expenses</h3>
+
+<table class="expense-table">
+
+<tr>
+
+<td>Accommodation</td>
+
+<td>$120</td>
+
+</tr>
+
+<tr>
+
+<td>Transport</td>
+
+<td>$80</td>
+
+</tr>
+
+<tr>
+
+<td>Food</td>
+
+<td>$70</td>
+
+</tr>
+
+<tr>
+
+<td>Activities</td>
+
+<td>$50</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Total</strong></td>
+
+<td><strong>$320</strong></td>
+
+</tr>
+
+</table>
+
+</div>
+
+<button class="save-btn">
+
+<i class="fa-solid fa-print"></i>
+
+Print Journey
+
+</button>
+
+</div>
+
+</div>
+
+<div class="modal" id="journeyStatsModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h2>Journey Status Breakdown</h2>
+
+<span id="closeJourneyStatsModal" class="close">&times;</span>
+
+</div>
+
+<p class="stats-subtitle">Based on currently visible journeys</p>
+
+<div id="journeyStatsBars" class="stats-bars"></div>
+
+</div>
+
+</div>
+
+<div class="modal" id="journeyFilterModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h2>Filter by Status</h2>
+
+<span id="closeJourneyFilterModal" class="close">&times;</span>
+
+</div>
+
+<p class="stats-subtitle">Choose a status to narrow the journeys below.</p>
+
+<div id="journeyFilterOptions" class="filter-options"></div>
+
+</div>
+
+</div>
+
+
+
+<section class="activity-section">
+
+<h2>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Recent Journey Activities
+
+</h2>
+
+<div class="activity-card">
+
+<i class="fa-solid fa-route"></i>
+
+<p>User saved a new travel itinerary.</p>
+
+<span>10 minutes ago</span>
+
+</div>
+
+<div class="activity-card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<p>Journey updated with a new destination.</p>
+
+<span>35 minutes ago</span>
+
+</div>
+
+<div class="activity-card">
+
+<i class="fa-solid fa-download"></i>
+
+<p>Journey report exported.</p>
+
+<span>2 hours ago</span>
+
+</div>
+
+<div class="activity-card">
+
+<i class="fa-solid fa-trash"></i>
+
+<p>One saved journey removed.</p>
+
+<span>5 hours ago</span>
+
+</div>
+
+</section>
+
+
+<section class="quick-panel">
+
+<h2>
+
+Quick Actions
+
+</h2>
+
+<div class="quick-grid">
+
+<div class="quick-card">
+
+<i class="fa-solid fa-route"></i>
+
+<h3>View Journeys</h3>
+
+<p>Browse all saved travel plans.</p>
+
+</div>
+
+<div class="quick-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Journey Statistics</h3>
+
+<p>Analyze saved journey trends.</p>
+
+</div>
+
+<div class="quick-card">
+
+<i class="fa-solid fa-file-export"></i>
+
+<h3>Export Data</h3>
+
+<p>Download journey records.</p>
+
+</div>
+
+<div class="quick-card">
+
+<i class="fa-solid fa-filter"></i>
+
+<h3>Filter Journeys</h3>
+
+<p>Search by destination or status.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 VISIT LANKA | Saved Journey Management System
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+<script src="../adminJs/admin-auth.js"></script>
+<script src="../adminJs/admin-journeys.js"></script>
+
+</body>
+
+</html>

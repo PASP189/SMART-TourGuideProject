@@ -1,0 +1,67 @@
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.admin-profile{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:linear-gradient(145deg,#162b48,#243b61);
+    padding:12px 20px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.admin-avatar{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#FFD700,#d4af37);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#071426;
+    font-size:24px;
+}
+
+.admin-details h4{
+    color:white;
+    font-size:17px;
+    margin-bottom:3px;
+}
+
+.admin-details span{
+    color:#b8c2d3;
+    font-size:13px;
+}
+
+.notification-btn{
+    margin-left:10px;
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:50%;
+    background:#10284d;
+    color:#FFD700;
+    cursor:pointer;
+    position:relative;
+    transition:.3s;
+}
+
+.notification-btn:hover{
+    transform:scale(1.08);
+    background:#17365e;
+}
+
+.notify-dot{
+    width:10px;
+    height:10px;
+    background:#ff3b30;
+    border-radius:50%;
+    position:absolute;
+    top:11px;
+    right:11px;
+}

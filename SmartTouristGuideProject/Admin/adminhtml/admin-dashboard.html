@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VISIT LANKA | Admin Dashboard</title>
+
+<link rel="stylesheet" href="../adminCss/admin-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>VISIT <span>LANKA</span></h2>
+
+<p>Administrator Panel</p>
+
+</div>
+
+<ul class="menu">
+
+<li class="active">
+<a href="#">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="manage-users.html">
+<i class="fa-solid fa-users"></i>
+Manage Users
+</a>
+</li>
+
+<li>
+<a href="#destinations">
+<i class="fa-solid fa-location-dot"></i>
+Manage Destinations
+</a>
+</li>
+
+<li>
+<a href="#partners">
+<i class="fa-solid fa-handshake"></i>
+Travel Partners
+</a>
+</li>
+
+<li>
+<a href="#questionnaires">
+<i class="fa-solid fa-clipboard-question"></i>
+Questionnaires
+</a>
+</li>
+
+<li>
+<a href="#journeys">
+<i class="fa-solid fa-route"></i>
+Saved Journeys
+</a>
+</li>
+
+<li>
+<a href="#reviews">
+<i class="fa-solid fa-star"></i>
+Reviews & Ratings
+</a>
+</li>
+
+<li>
+<a href="reports.html">
+<i class="fa-solid fa-chart-column"></i>
+Reports
+</a>
+</li>
+
+<li>
+<a href="#profile">
+<i class="fa-solid fa-user-shield"></i>
+Profile
+</a>
+</li>
+
+<li>
+<a href="../html/login.html" class="logout-btn" id="logoutLink">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div>
+
+<h1>Admin Dashboard</h1>
+
+<p>Welcome back Administrator</p>
+
+</div>
+
+<div class="topbar-right">
+
+    
+
+
+<div class="admin-profile">
+
+    <div class="admin-avatar">
+        <i class="fa-solid fa-user-shield"></i>
+    </div>
+
+    <div class="admin-details">
+        <h4>Administrator</h4>
+        <span>System Manager</span>
+    </div>
+
+  
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="overview">
+
+<div class="card">
+
+    <div class="card-info">
+        <h4>Total Users</h4>
+        <h2 id="userCount">254</h2>
+        <p>Registered users</p>
+    </div>
+
+    <div class="icon users">
+        <i class="fa-solid fa-users"></i>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-info">
+        <h4>Destinations</h4>
+        <h2 id="destCount">38</h2>
+        <p>Tourist attractions</p>
+    </div>
+
+    <div class="icon destination">
+        <i class="fa-solid fa-location-dot"></i>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-info">
+        <h4>Travel Partners</h4>
+        <h2 id="partnerTotalCount">126</h2>
+        <p>Registered partners</p>
+    </div>
+
+    <div class="icon partner">
+        <i class="fa-solid fa-handshake"></i>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-info">
+        <h4>Verified Partners</h4>
+        <h2 id="verifiedPartnerCount">104</h2>
+        <p>Approved businesses</p>
+    </div>
+
+    <div class="icon review">
+        <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-info">
+        <h4>Reviews</h4>
+        <h2 id="reviewCount">521</h2>
+        <p>User reviews</p>
+    </div>
+
+    <div class="icon question">
+        <i class="fa-solid fa-star"></i>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-info">
+        <h4>Questionnaires</h4>
+        <h2 id="journeyCount">311</h2>
+        <p>Completed forms</p>
+    </div>
+
+    <div class="icon saved">
+        <i class="fa-solid fa-clipboard-question"></i>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= QUICK ACTIONS ================= -->
+
+<section class="quick-panel">
+
+    <h2>
+        <i class="fa-solid fa-bolt"></i>
+        Quick Actions
+    </h2>
+
+    <div class="quick-grid">
+
+        <a href="manage-destinations.html" class="quick-card">
+
+            <div class="quick-icon destination">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <h3>Add Destination</h3>
+
+            <p>Add new tourist attractions and destinations.</p>
+
+        </a>
+
+        <a href="manage-partners.html" class="quick-card">
+
+            <div class="quick-icon partner">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <h3>Verify Partners</h3>
+
+            <p>Approve or reject travel partners.</p>
+
+        </a>
+
+        <a href="manage-users.html" class="quick-card"  id="manageUsers">
+
+            <div class="quick-icon user">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h3>Manage Users</h3>
+
+            <p>Edit, suspend or remove user accounts.</p>
+
+        </a>
+
+        <a href="reports.html" class="quick-card" id="viewReports">
+
+            <div class="quick-icon report">
+                <i class="fa-solid fa-chart-column"></i>
+            </div>
+
+            <h3>Reports</h3>
+
+            <p>View analytics and download reports.</p>
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ================= MANAGE USERS ================= -->
+
+<section class="dashboard-section" id="users">
+
+<div class="section-header">
+
+<h2><i class="fa-solid fa-users"></i> Manage Users</h2>
+
+<button  id="addUserBtn" class="action-btn">
+
+    <i class="fa-solid fa-user-plus"></i>
+
+    <span>Add User</span>
+
+</button>
+
+</div>
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Role</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>001</td>
+
+<td>Kasun Perera</td>
+
+<td>kasun@gmail.com</td>
+
+<td>User</td>
+
+<td><span class="status active">Active</span></td>
+
+<td class="table-actions">
+
+<button class="edit-btn" data-id="001">
+    <i class="fa-solid fa-pen"></i>
+    
+</button>
+
+<button class="delete-btn " data-id="001">
+    <i class="fa-solid fa-trash"></i>
+    
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>002</td>
+
+<td>Nimali Silva</td>
+
+<td>nimali@gmail.com</td>
+
+<td>User</td>
+
+<td><span class="status active">Active</span></td>
+
+<td class="table-actions">
+
+<button class="edit-btn" data-id="001">
+    <i class="fa-solid fa-pen"></i>
+    
+</button>
+
+<button class="delete-btn" data-id="001">
+    <i class="fa-solid fa-trash"></i>
+    
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= DESTINATIONS ================= -->
+
+<section class="dashboard-section" id="destinations">
+
+<div class="section-header">
+
+<h2><i class="fa-solid fa-location-dot"></i> Manage Destinations</h2>
+
+<button id="addDestination" class="action-btn">
+
+    <i class="fa-solid fa-location-dot"></i>
+
+    <span>Add Destination</span>
+
+</button>
+</div>
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>Destination</th>
+
+<th>District</th>
+
+<th>Category</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Sigiriya</td>
+
+<td>Matale</td>
+
+<td>Heritage</td>
+
+<td><span class="status verified">Published</span></td>
+
+<td class="table-actions">
+
+<button class="edit-btn" data-id="001">
+    <i class="fa-solid fa-pen"></i>
+    
+</button>
+
+<button class="delete-btn" data-id="001">
+    <i class="fa-solid fa-trash"></i>
+    
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Ella</td>
+
+<td>Badulla</td>
+
+<td>Mountain</td>
+
+<td><span class="status verified">Published</span></td>
+<td class="table-actions">
+
+<button class="edit-btn" data-id="001">
+    <i class="fa-solid fa-pen"></i>
+    
+</button>
+
+<button class="delete-btn" data-id="001">
+    <i class="fa-solid fa-trash"></i>
+    
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= TRAVEL PARTNERS ================= -->
+<!-- ================= PARTNER VERIFICATION ================= -->
+
+<section class="dashboard-section" id="partners">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-handshake"></i>
+
+Partner Verification
+
+</h2>
+
+<a href="manage-partners.html" class="view-all-btn" id="verifyPartner">
+
+View All
+
+</a>
+
+</div>
+
+<div class="partner-grid" id="pendingPartnersGrid">
+
+<p>Loading pending partners...</p>
+
+</div>
+
+</section>
+
+<!-- ================= QUESTIONNAIRES ================= -->
+
+<section class="dashboard-section" id="questionnaires">
+
+<div class="section-header">
+
+<h2><i class="fa-solid fa-clipboard-question"></i> Latest Questionnaires</h2>
+
+</div>
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>User</th>
+
+<th>Budget</th>
+
+<th>Travel Days</th>
+
+<th>Interest</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Kasun</td>
+
+<td>$1200</td>
+
+<td>7</td>
+
+<td>Nature</td>
+
+</tr>
+
+<tr>
+
+<td>Nimali</td>
+
+<td>$850</td>
+
+<td>5</td>
+
+<td>Adventure</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= SAVED JOURNEYS ================= -->
+
+<section class="dashboard-section" id="journeys">
+
+<div class="section-header">
+
+<h2><i class="fa-solid fa-route"></i> Saved Journeys</h2>
+
+</div>
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>User</th>
+
+<th>Destination</th>
+
+<th>Total Budget</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Kasun</td>
+
+<td>Sigiriya + Kandy</td>
+
+<td>$1340</td>
+
+<td>Completed</td>
+
+</tr>
+
+<tr>
+
+<td>Nimali</td>
+
+<td>Ella</td>
+
+<td>$760</td>
+
+<td>Planned</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= REVIEWS ================= -->
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="dashboard-section" id="reviews">
+
+<div class="section-header">
+<h2><i class="fa-solid fa-star"></i> Latest Reviews</h2>
+<a href="reviews.html" class="view-all-btn">
+View All
+</a>
+</div>
+
+<div class="reviews-grid">
+
+<div class="review-card">
+
+<div class="review-top">
+
+<div>
+
+<h3>Sigiriya</h3>
+
+<span class="review-user">
+Kasun Perera
+</span>
+
+</div>
+
+<div class="rating">
+★★★★★
+</div>
+
+</div>
+
+<p class="review-text">
+Amazing historical destination. Clean surroundings, friendly guides and breathtaking views.
+</p>
+
+<div class="review-footer">
+
+<span>
+<i class="fa-solid fa-calendar"></i>
+2 hours ago
+</span>
+
+<span class="approved">
+Verified Review
+</span>
+
+</div>
+
+</div>
+
+<div class="review-card">
+
+<div class="review-top">
+
+<div>
+
+<h3>Mirissa Beach</h3>
+
+<span class="review-user">
+Nimali Silva
+</span>
+
+</div>
+
+<div class="rating">
+★★★★☆
+</div>
+
+</div>
+
+<p class="review-text">
+Beautiful beach with excellent whale watching experience.
+</p>
+
+<div class="review-footer">
+
+<span>
+<i class="fa-solid fa-calendar"></i>
+Yesterday
+</span>
+
+<span class="approved">
+Verified Review
+</span>
+
+</div>
+
+</div>
+
+<div class="review-card">
+
+<div class="review-top">
+
+<div>
+
+<h3>Ella</h3>
+
+<span class="review-user">
+John Smith
+</span>
+
+</div>
+
+<div class="rating">
+★★★★★
+</div>
+
+</div>
+
+<p class="review-text">
+Nine Arch Bridge and Little Adam's Peak were unforgettable.
+</p>
+
+<div class="review-footer">
+
+<span>
+<i class="fa-solid fa-calendar"></i>
+3 days ago
+</span>
+
+<span class="approved">
+Verified Review
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RECENT ACTIVITY ================= -->
+
+<!-- ================= RECENT ACTIVITIES ================= -->
+
+<section class="dashboard-section">
+
+<div class="section-header">
+
+<h2>
+<i class="fa-solid fa-clock-rotate-left"></i>
+Recent Activities
+</h2>
+
+</div>
+
+<div class="activity-timeline">
+
+<div class="activity-item success">
+
+<div class="activity-icon">
+<i class="fa-solid fa-user-plus"></i>
+</div>
+
+<div class="activity-content">
+
+<h4>New User Registered</h4>
+
+<p>Kasun Perera successfully created an account.</p>
+
+<span>5 Minutes Ago</span>
+
+</div>
+
+</div>
+
+<div class="activity-item info">
+
+<div class="activity-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+
+<div class="activity-content">
+
+<h4>Destination Added</h4>
+
+<p>Knuckles Mountain Range has been published.</p>
+
+<span>22 Minutes Ago</span>
+
+</div>
+
+</div>
+
+<div class="activity-item warning">
+
+<div class="activity-icon">
+<i class="fa-solid fa-handshake"></i>
+</div>
+
+<div class="activity-content">
+
+<h4>Partner Verified</h4>
+
+<p>Jetwing Hotels verification completed.</p>
+
+<span>1 Hour Ago</span>
+
+</div>
+
+</div>
+
+<div class="activity-item primary">
+
+<div class="activity-icon">
+<i class="fa-solid fa-route"></i>
+</div>
+
+<div class="activity-content">
+
+<h4>Journey Saved</h4>
+
+<p>Nimali saved a new itinerary.</p>
+
+<span>Today</span>
+
+</div>
+
+</div>
+
+<div class="activity-item danger">
+
+<div class="activity-icon">
+<i class="fa-solid fa-star"></i>
+</div>
+
+<div class="activity-content">
+
+<h4>New Review Submitted</h4>
+
+<p>Sigiriya received a new 5-star review.</p>
+
+<span>Today</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer class="admin-footer">
+
+<p>
+
+© 2026 VISIT LANKA | Administrator Dashboard
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="../adminJs/admin-auth.js"></script>
+<script src="../adminJs/admin-dashboard.js"></script>
+
+</body>
+
+</html>

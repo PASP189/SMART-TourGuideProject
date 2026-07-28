@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISIT LANKA | Smart Destination Marketplace</title>
+    <style>
+       
+        :root {
+            --deep-canvas-black: #09090b;   /* Main screen container background */
+            --midnight-blue-card: #121214;  /* Premium dashboard card block fill */
+            --embossed-gold: #dfb26c;       /* Highlight headers and currency values */
+            --glowing-teal: #00cbc6;        /* Active selector states and healthy status counters */
+            --danger-coral: #ff5252;        /* High-visibility safety strips and over-budget warnings */
+            --text-white: #ffffff;
+            --text-muted: #8b949e;
+            --border-dark: #22252a;
+        }
+
+        body {
+            background-color: var(--deep-canvas-black);
+            color: var(--text-white);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #0d0d0f;
+            border-bottom: 2px solid var(--border-dark);
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: var(--text-white);
+            text-transform: uppercase;
+        }
+        header h1 span { color: var(--embossed-gold); }
+
+        /*
+           2. WIDESCREEN DESKTOP WORKSPACE APPARATUS (2-COLUMN GRID ASSEMBLY)
+        */
+        .desktop-workspace {
+            display: grid;
+            grid-template-columns: 360px 1fr; /* Fixed parameters control sidebar, Fluid home page wall */
+            gap: 30px;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        /* 
+           3. LEFT SIDEBAR PANEL: TEASER & BUDGET RADAR CONTROLLER
+           */
+        .sidebar-controller {
+            background-color: var(--midnight-blue-card);
+            border: 1px solid var(--border-dark);
+            border-radius: 12px;
+            padding: 25px;
+            height: fit-content;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .sidebar-title-tag {
+            background-color: transparent;
+            border: 1px solid var(--embossed-gold);
+            color: var(--embossed-gold);
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .control-group { margin-bottom: 20px; }
+        .control-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: bold;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-controller select, .sidebar-controller input {
+            width: 100%;
+            background-color: var(--deep-canvas-black);
+            border: 1px solid var(--border-dark);
+            color: var(--text-white);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .sidebar-controller select:focus, .sidebar-controller input:focus { border-color: var(--embossed-gold); }
+
+        /* ACTIVE ENCAPSULATED JAVA LOGE NODE TRACKER CARD */
+        .live-budget-tracker-box {
+            border: 2px solid var(--glowing-teal);
+            background-color: #0b1c1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .node-badge {
+            background-color: var(--glowing-teal);
+            color: var(--deep-canvas-black);
+            font-size: 0.72rem;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .balance-output-value {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--glowing-teal);
+            margin: 10px 0;
+        }
+
+        /* LEDGER COLOR KEY REFERENCE GUIDE */
+        .color-legend-block {
+            margin-top: 15px;
+            text-align: left;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding-left: 10px;
+        }
+        .legend-row { margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+
+        /* 
+           4. RIGHT SIDE CONTENT DISPLAYER WALL: THE SLIDESHOW CONTAINER
+            */
+        .home-content-wall { display: flex; flex-direction: column; gap: 25px; }
+
+        .section-headline {
+            font-size: 1.15rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: var(--embossed-gold);
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        /* SLIDESHOW COLUMN MATRIX ROWS ARRANGED SIDE-BY-SIDE */
+        .slideshow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 Curated cards side-by-side matching image */
+            gap: 20px;
+        }
+
+        .travel-card {
+            background-color: var(--midnight-blue-card);
+            border: 1px solid var(--border-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .card-header-inner { padding: 20px; border-bottom: 1px solid var(--border-dark); }
+        .card-header-inner h4 { margin: 0 0 10px 0; font-size: 1.05rem; letter-spacing: 0.5px; }
+
+        .badge {
+            font-size: 0.68rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .badge.nature-theme { background-color: #1a2e1a; color: #52c41a; }
+        .badge.wedding-theme { background-color: #3a1e1a; color: #f5222d; }
+        .badge.fleet-theme { background-color: #132742; color: #1890ff; }
+
+        /* EMBEDDED PLACEHOLDER PICTURE COMPONENT WALLS */
+        .card-photo-receptacle {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #1c1d22;
+        }
+
+        /* LOCALIZED ADVISORY SAFETY tag */
+        .safety-strip-alert {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            line-height: 1.4;
+        }
+        .safety-strip-alert.green-strip { background-color: #1e3a1e; color: #b7eb8f; }
+        .safety-strip-alert.red-strip { background-color: #5c1d1d; color: #ffa39e; }
+        .safety-strip-alert.blue-strip { background-color: #1a2d42; color: #91d5ff; }
+
+        .card-description-para {
+            padding: 15px 20px;
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        /* INTERLOCK INTERFACE COMMERCE LEDGERS */
+        .card-commerce-footer {
+            background-color: #16161a;
+            border-top: 1px solid var(--border-dark);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .rate-label-text { font-size: 0.88rem; font-weight: bold; color: var(--embossed-gold); }
+
+        .itinerary-toggle-row { display: flex; align-items: center; gap: 6px; }
+        .itinerary-toggle-row input { width: 16px; height: 16px; accent-color: var(--glowing-teal); cursor: pointer; }
+        .itinerary-toggle-row label { font-size: 0.85rem; font-weight: bold; cursor: pointer; user-select: none; }
+
+        /* DIRECT REVENUE CHANNEL LINKS EXCLUSIVE TO YOUR FLEET */
+        .whatsapp-channel-row {
+            background-color: #0e0e10;
+            border-top: 1px dashed var(--border-dark);
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        .whatsapp-anchor-btn {
+            display: block;
+            background-color: #1d3527;
+            border: 1px solid #235c3b;
+            color: #73d13d;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .whatsapp-anchor-btn:hover { background-color: #235c3b; color: #ffffff; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>VISIT <span>LANKA</span></h1>
+    </header>
+
+    <div class="desktop-workspace">
+        
+        <!-- ===================================================================
+             LEFT COLUMN SIDEBAR PANEL: SYSTEM READOUT INTEGRATIONS
+=================================================================== -->
+

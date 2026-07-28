@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VISIT LANKA | Journey Details</title>
+
+    <link rel="stylesheet"
+          href="../css/journey-details.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+
+        VISIT <span>LANKA</span>
+
+    </div>
+
+    <ul>
+
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="destinations.html">Destinations</a></li>
+
+        <li><a href="travel-partners.html">Travel Partners</a></li>
+
+        <li><a href="journey-planner.html">Journey Planner</a></li>
+
+        <li><a href="my-journeys.html">My Journeys</a></li>
+
+    </ul>
+
+</nav>
+
+<header class="hero">
+
+    <div class="overlay">
+
+        <h1>
+
+            <i class="fa-solid fa-route"></i>
+
+            Journey Details
+
+        </h1>
+
+        <p>
+
+            Review your complete travel itinerary before beginning your unforgettable journey through Sri Lanka.
+
+        </p>
+
+    </div>
+
+</header>
+
+<section class="details-container">
+
+    <div class="journey-summary">
+
+        <h2>
+
+            Journey Summary
+
+        </h2>
+
+        <div class="summary-grid">
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3>Date Created</h3>
+
+                <p id="journeyDate"></p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <h3>Estimated Budget</h3>
+
+                <p id="journeyBudget"></p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>Total Destinations</h3>
+
+                <p id="destinationCount"></p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Travel Partners</h3>
+
+                <p id="partnerCount"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="itinerary">
+
+        <h2>
+
+            Selected Destinations
+
+        </h2>
+
+        <div id="destinationList">
+
+        </div>
+
+    </div>
+
+    <div class="partners">
+
+        <h2>
+
+            Selected Travel Partners
+
+        </h2>
+
+        <div id="partnerList">
+
+        </div>
+
+    </div>
+
+    <div class="action-buttons">
+
+        <button id="downloadBtn">
+
+            <i class="fa-solid fa-download"></i>
+
+            Download PDF
+
+        </button>
+
+        <button id="finishBtn">
+
+            
+
+            Checkout
+
+        </button>
+
+    </div>
+
+</section>
+
+<script src="../js/journey-details.js"></script>
+
+</body>
+
+</html>

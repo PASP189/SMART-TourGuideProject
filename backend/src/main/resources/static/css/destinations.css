@@ -1,0 +1,741 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#071426;
+    color:white;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+
+    position:sticky;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(8,28,52,.92);
+
+    backdrop-filter:blur(12px);
+
+    z-index:1000;
+
+    border-bottom:1px solid rgba(255,215,0,.15);
+
+}
+
+.logo{
+
+    font-size:28px;
+    font-weight:700;
+    color:#FFD700;
+    letter-spacing:2px;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:30px;
+
+}
+
+nav ul li a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#FFD700;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    text-align:center;
+
+    padding:70px 10%;
+
+}
+
+.hero h1{
+
+    font-size:52px;
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    color:#ddd;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box{
+
+    width:90%;
+    max-width:700px;
+
+    margin:20px auto 60px;
+
+    display:flex;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px 0 0 10px;
+
+    font-size:16px;
+
+}
+
+.search-box button{
+
+    width:70px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#FFD700;
+
+    color:#081C34;
+
+    border-radius:0 10px 10px 0;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:#f6c400;
+
+}
+
+/* ===========================
+   RECOMMENDATION CARD
+=========================== */
+
+.recommend{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:70px;
+
+}
+
+.recommend-card{
+
+    width:85%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,215,0,.25);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.recommend-card i{
+
+    font-size:45px;
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+}
+
+.recommend-card h2{
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+}
+
+.recommend-card p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+.recommend-card a{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    background:#FFD700;
+
+    color:#081C34;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.recommend-card a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(255,215,0,.3);
+
+}
+
+/* ===========================
+   FILTER BUTTONS
+=========================== */
+
+.filter{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.filter h2{
+
+    margin-bottom:30px;
+
+    color:#FFD700;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.buttons button{
+
+    padding:12px 25px;
+
+    border:1px solid #FFD700;
+
+    background:transparent;
+
+    color:#FFD700;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.buttons button:hover{
+
+    background:#FFD700;
+
+    color:#081C34;
+
+}
+
+/* ===========================
+   DESTINATION GRID
+=========================== */
+
+.cards{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    margin-bottom:80px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    background:#102845;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,215,0,.12);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.content{
+
+    padding:22px;
+
+}
+
+.content h3{
+
+    color:#FFD700;
+
+    margin-bottom:10px;
+
+}
+
+.content p{
+
+    color:#ddd;
+
+    line-height:1.7;
+
+    margin-bottom:18px;
+
+}
+
+/* ===========================
+   TAGS
+=========================== */
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.tags span{
+
+    background:#FFD700;
+
+    color:#081C34;
+
+    padding:6px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.location{
+
+    color:#f1f1f1;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   CARD BUTTONS
+=========================== */
+
+.content a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#FFD700;
+
+    color:#081C34;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    margin-right:10px;
+
+    transition:.3s;
+
+}
+
+.content a:hover{
+
+    background:white;
+
+}
+
+.content button{
+
+    padding:10px 18px;
+
+    border:1px solid #FFD700;
+
+    background:transparent;
+
+    color:#FFD700;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.content button:hover{
+
+    background:#FFD700;
+
+    color:#081C34;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#05111f;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#bbb;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+nav{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero{
+
+    padding:50px 20px;
+
+}
+
+.search-box{
+
+    width:95%;
+
+}
+
+.recommend-card{
+
+    width:95%;
+
+    padding:30px;
+
+}
+
+}
+
+/*======================================
+            MY TRIP PANEL
+======================================*/
+
+.trip-panel{
+
+    width:90%;
+    margin:50px auto;
+    background:rgba(15,32,55,0.95);
+    border:2px solid #d4af37;
+    border-radius:18px;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+
+}
+
+.trip-left h2{
+
+    color:#d4af37;
+    margin-bottom:15px;
+    font-size:30px;
+
+}
+
+#tripCount{
+
+    color:white;
+    font-size:18px;
+    margin-bottom:15px;
+
+}
+
+#selectedList{
+
+    color:white;
+
+}
+
+.empty-trip{
+
+    color:#bdbdbd;
+    font-style:italic;
+
+}
+
+.trip-right{
+
+    display:flex;
+    align-items:center;
+
+}
+
+#continueBtn{
+
+    background:#d4af37;
+    color:#071426;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+#continueBtn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+#continueBtn:disabled{
+
+    background:#777;
+    color:#ddd;
+    cursor:not-allowed;
+    transform:none;
+
+}
+/*======================================
+          ADD TO TRIP BUTTON
+======================================*/
+
+.trip-btn{
+
+    width:100%;
+    margin-top:12px;
+    padding:12px;
+    border-radius:30px;
+    border:2px solid #d4af37;
+    background:transparent;
+    color:#d4af37;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.trip-btn:hover{
+
+    background:#d4af37;
+    color:#071426;
+
+}
+
+.trip-btn.added{
+
+    background:#28a745;
+    border-color:#28a745;
+    color:white;
+
+}
+
+.trip-btn i{
+
+    margin-right:8px;
+
+}
+
+/*======================================
+         SELECTED DESTINATION LIST
+======================================*/
+
+.selected-item{
+
+    background:#24364d;
+    padding:10px 15px;
+    border-radius:10px;
+    margin:8px 0;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.selected-item i{
+
+    color:#28a745;
+
+}
+/*======================================
+             RESPONSIVE
+======================================*/
+
+@media(max-width:900px){
+
+.trip-panel{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+.trip-right{
+
+    width:100%;
+
+}
+
+#continueBtn{
+
+    width:100%;
+
+}
+
+}

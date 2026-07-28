@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISIT LANKA | Trip Checkout & Booking</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        .checkout-header {
+            padding: 140px 20px 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--secondary), var(--primary));
+        }
+        
+        .checkout-header h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .checkout-header p {
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        .checkout-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* CARD STYLES */
+        .checkout-card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .checkout-card h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+
+        /* SUMMARY LIST */
+        .summary-group {
+            margin-bottom: 20px;
+        }
+
+        .summary-group-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .summary-item-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .summary-item-info i {
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        .price-badge {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* PRICE BREAKDOWN */
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            color: var(--text);
+        }
+
+        .price-row.total {
+            border-top: 2px dashed rgba(255, 215, 0, 0.3);
+            margin-top: 15px;
+            padding-top: 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .price-row.total span:last-child {
+            color: var(--gold);
+        }
+
+        /* FORM INPUTS */
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+        }
+
+        .form-group input, .form-group select {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 14px;
+            border-radius: 8px;
+            color: var(--white);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* PAYMENT METHODS */
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .payment-option {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-option.active, .payment-option:hover {
+            border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .payment-option i {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .payment-option span {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* SUBMIT BUTTON */
+        .btn-confirm {
+            width: 100%;
+            padding: 16px;
+            background: var(--gold);
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-confirm:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        /* CONFIRMATION MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--secondary);
+            border: 2px solid var(--gold);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            animation: modalPop 0.4s ease-out;
+        }
+
+        @keyframes modalPop {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-icon {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .modal-content h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: var(--text);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .modal-btn {
+            padding: 12px 30px;
+            background: var(--gold);
+            color: var(--primary);
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .modal-btn:hover {
+            background: var(--white);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">VISIT LANKA</a>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="travel-partners.html">Travel Partners</a></li>
+            <li><a href="questionnaire.html">Journey Planner</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="register-btn">Register</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="checkout-header">
+        <h1>Trip Checkout & Booking</h1>
+        <p>Review your custom Sri Lanka travel itinerary and confirm your reservation.</p>
+    </section>
+
+    <!-- MAIN CONTAINER -->
+    <div class="checkout-container">
+        
+        <!-- LEFT COLUMN: FORM DETAILS -->
+        <div>
+            <!-- TRAVELER INFORMATION -->
+            <div class="checkout-card">
+                <h2><i class="fa-solid fa-user-gear"></i> Primary Traveler Details</h2>
+                <form id="checkoutForm" onsubmit="handleBookingSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="e.g. john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+94 77 123 4567" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passport">Passport / National ID</label>
+                            <input type="text" id="passport" placeholder="N12345678" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- PAYMENT SELECTION -->
+            <div class="checkout-card">
+                <h2><i class="fa-solid fa-credit-card"></i> Select Payment Method</h2>
+                <div class="payment-options">
+                    <div class="payment-option active" onclick="selectPayment(this)">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Credit / Debit Card</span>
+                    </div>
+                    <div class="payment-option" onclick="selectPayment(this)">
+                        <i class="fa-brands fa-paypal"></i>
+                        <span>PayPal</span>
+                    </div>
+                    <div class="payment-option" onclick="selectPayment(this)">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <span>Pay on Arrival</span>
+                    </div>
+                </div>
+
+                <div id="cardDetails">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="4532 •••• •••• 8892">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="password" id="cvv" placeholder="•••">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: ITINERARY SUMMARY & TOTAL -->
+        <div>
+            <div class="checkout-card">
+                <h2><i class="fa-solid fa-receipt"></i> Itinerary Summary</h2>
+                
+                <div class="summary-group">
+                    <div class="summary-group-title">Selected Travel Partners</div>
+                    <div id="partnersSummaryList">
+                        <!-- Populated dynamically by JS -->
+                        <div class="summary-item">
+                            <div class="summary-item-info">
+                                <i class="fa-solid fa-hotel"></i>
+                                <span>Hotel & Resort Booking</span>
+                            </div>
+                            <span class="price-badge">$250</span>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item-info">
+                                <i class="fa-solid fa-car"></i>
+                                <span>Vehicle Rental & Driver</span>
+                            </div>
+                            <span class="price-badge">$120</span>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item-info">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Certified Tour Guide</span>
+                            </div>
+                            <span class="price-badge">$80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICE BREAKDOWN -->
+                <div style="margin-top: 30px;">
+                    <div class="price-row">
+                        <span>Subtotal</span>
+                        <span id="subtotalPrice">$450.00</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Taxes & Service Fees (10%)</span>
+                        <span id="taxPrice">$45.00</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total Amount</span>
+                        <span id="totalPrice">$495.00</span>
+                    </div>
+                </div>
+
+                <button type="button" onclick="document.getElementById('checkoutForm').requestSubmit()" class="btn-confirm" style="margin-top: 25px;">
+                    <i class="fa-solid fa-lock"></i> Confirm & Book Trip
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SUCCESS CONFIRMATION MODAL -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <i class="fa-solid fa-circle-check modal-icon"></i>
+            <h3>Booking Confirmed!</h3>
+            <p>Your Sri Lanka travel itinerary has been successfully processed. A detailed confirmation voucher and receipt have been generated for your journey.</p>
+            <a href="home.html" class="modal-btn">Return to Home</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>VISIT LANKA</h3>
+                <p>Your Ultimate Smart Travel Planner for exploring the pearl of the Indian Ocean.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Visit Lanka. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<script>
+    function selectPayment(element) {
+        document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('active'));
+        element.classList.add('active');
+    }
+
+    function handleBookingSubmit(event) {
+        event.preventDefault();
+        document.getElementById('successModal').style.display = 'flex';
+    }
+
+    const EXCHANGE_RATE = 305;
+    const FLIGHT_LKR = 128100;
+
+    function getPriceLKR(partner) {
+        if (!partner) return 0;
+        if (partner.lkrPrice) return Number(partner.lkrPrice);
+        if (partner.usdPrice) return Math.round(Number(partner.usdPrice) * EXCHANGE_RATE);
+        if (partner.price) return Number(String(partner.price).replace(/[^0-9]/g, "")) || 0;
+        return 0;
+    }
+
+    function convertToUSD(lkr) {
+        return Math.round(lkr / EXCHANGE_RATE);
+    }
+
+    function categoryIcon(category) {
+        switch ((category || "").toLowerCase()) {
+            case "hotel":  return "fa-hotel";
+            case "rental": return "fa-car";
+            case "guide":  return "fa-user-tie";
+            case "agency": return "fa-earth-asia";
+            default:       return "fa-star";
+        }
+    }
+
+    // Removes duplicate entries from selectedPartnerData, keeping only
+    // one card per partner. This guards against upstream localStorage
+    // writes (e.g. re-selecting the same partner on Travel Partners)
+    // accidentally pushing the same partner in twice.
+    function dedupePartners(list) {
+        const seen = new Set();
+        const unique = [];
+
+        list.forEach(partner => {
+            // Fall back to businessName+category if a partner is ever
+            // missing an id, so it still gets deduped correctly.
+            const key = partner && (partner.id != null
+                ? String(partner.id)
+                : `${partner.businessName || ''}|${partner.category || ''}`);
+
+            if (key && !seen.has(key)) {
+                seen.add(key);
+                unique.push(partner);
+            }
+        });
+
+        return unique;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const rawPartnersData = JSON.parse(localStorage.getItem('selectedPartnerData')) || [];
+        const partnersData = dedupePartners(rawPartnersData);
+
+        if (partnersData.length === 0) {
+            return;
+        }
+
+        let listHtml = '';
+        let subtotalLKR = 0;
+
+        partnersData.forEach(partner => {
+            const category = (partner.category || "").toLowerCase();
+            const lkr = getPriceLKR(partner);
+            const usd = convertToUSD(lkr);
+
+            if (category !== "agency") {
+                subtotalLKR += lkr;
+            }
+
+            listHtml += `
+                <div class="summary-item">
+                    <div class="summary-item-info">
+                        <i class="fa-solid ${categoryIcon(category)}"></i>
+                        <span>${partner.businessName || category || 'Selected Partner'}${category === 'agency' ? ' <small style="color:#999;">(not included in total)</small>' : ''}</span>
+                    </div>
+                    <span class="price-badge">$${usd}</span>
+                </div>
+            `;
+        });
+
+        subtotalLKR += FLIGHT_LKR;
+        listHtml += `
+            <div class="summary-item">
+                <div class="summary-item-info">
+                    <i class="fa-solid fa-plane"></i>
+                    <span>Estimated Flights</span>
+                </div>
+                <span class="price-badge">$${convertToUSD(FLIGHT_LKR)}</span>
+            </div>
+        `;
+
+        document.getElementById('partnersSummaryList').innerHTML = listHtml;
+
+        const subtotal = convertToUSD(subtotalLKR);
+        const tax = Math.round(subtotal * 0.1);
+
+        document.getElementById('subtotalPrice').innerText = '$' + subtotal + '.00';
+        document.getElementById('taxPrice').innerText = '$' + tax + '.00';
+        document.getElementById('totalPrice').innerText = '$' + (subtotal + tax) + '.00';
+    });
+</script>
+</body>
+</html>

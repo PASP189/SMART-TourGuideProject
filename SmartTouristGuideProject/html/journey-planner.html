@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VISIT LANKA | Journey Planner</title>
+
+    <link rel="stylesheet"
+          href="../css/journey-planner.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        VISIT <span>LANKA</span>
+
+    </div>
+
+    <ul>
+
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="destinations.html">Destinations</a></li>
+
+        <li><a href="travel-partners.html">Travel Partners</a></li>
+
+        <li><a class="active" href="#">Journey Planner</a></li>
+
+        <li><a href="home.html#about">About</a></li>
+
+        <li><a href="home.html#contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ===================== HERO ===================== -->
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>
+
+            My Journey Planner
+
+        </h1>
+
+        <p>
+
+            Review your selected destinations,
+            travel partners and estimated budget
+            before confirming your unforgettable
+            Sri Lankan adventure.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================== JOURNEY STATUS ===================== -->
+
+<section class="journey-status">
+
+    <div class="status-item completed">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>Questionnaire</span>
+
+    </div>
+
+    <div class="status-line"></div>
+
+    <div class="status-item completed">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>Destinations</span>
+
+    </div>
+
+    <div class="status-line"></div>
+
+    <div class="status-item completed">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>Travel Partners</span>
+
+    </div>
+
+    <div class="status-line"></div>
+
+    <div class="status-item active">
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+        <span>Journey Planner</span>
+
+    </div>
+
+    <div class="status-line"></div>
+
+    <div class="status-item">
+
+        <i class="fa-regular fa-circle"></i>
+
+        <span>Confirmed</span>
+
+    </div>
+
+</section>
+
+<!-- ===================== BACK BUTTON ===================== -->
+
+<section class="back-section">
+
+    <button id="backButton">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back To Travel Partners
+
+    </button>
+
+</section>
+
+<!-- ===================== SELECTED DESTINATIONS ===================== -->
+
+<section class="planner-section">
+
+    <div class="section-heading">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <h2>
+
+            Selected Destinations
+
+        </h2>
+
+    </div>
+
+    <p>
+
+        These destinations were selected
+        based on your travel preferences.
+
+    </p>
+
+    <div id="destinationContainer"
+
+         class="planner-grid">
+
+    </div>
+
+</section>
+
+<!-- ===================== SELECTED HOTEL ===================== -->
+
+<section class="planner-section">
+
+    <div class="section-heading">
+
+        <i class="fa-solid fa-hotel"></i>
+
+        <h2>Accommodation</h2>
+
+    </div>
+
+    <div id="hotelContainer" class="planner-grid">
+
+        <!-- Loaded by JavaScript -->
+
+    </div>
+
+</section>
+
+<!-- ===================== TRANSPORT ===================== -->
+
+<section class="planner-section">
+
+    <div class="section-heading">
+
+        <i class="fa-solid fa-car-side"></i>
+
+        <h2>Transportation</h2>
+
+    </div>
+
+    <div id="transportContainer" class="planner-grid">
+
+        <!-- Loaded by JavaScript -->
+
+    </div>
+
+</section>
+
+<!-- ===================== TRAVEL AGENCY ===================== -->
+
+<section class="planner-section">
+
+    <div class="section-heading">
+
+        <i class="fa-solid fa-earth-asia"></i>
+
+        <h2>Travel Agency</h2>
+
+    </div>
+
+    <div id="agencyContainer" class="planner-grid">
+
+        <!-- Loaded by JavaScript -->
+
+    </div>
+
+</section>
+
+<!-- ===================== TOUR GUIDE ===================== -->
+
+<section class="planner-section">
+
+    <div class="section-heading">
+
+        <i class="fa-solid fa-user-tie"></i>
+
+        <h2>Tour Guide</h2>
+
+    </div>
+
+    <div id="guideContainer" class="planner-grid">
+
+        <!-- Loaded by JavaScript -->
+
+    </div>
+
+</section>
+
+<!-- ===================== EXPERIENCES ===================== -->
+
+<section class="planner-section">
+
+    <div class="section-heading">
+
+        <i class="fa-solid fa-star"></i>
+
+        <h2>Experiences</h2>
+
+    </div>
+
+    <div id="experienceContainer"
+
+         class="planner-grid">
+
+    </div>
+
+</section>
+
+<!-- ===================== BUDGET SUMMARY ===================== -->
+
+<section class="budget-section">
+
+    <div class="budget-card">
+
+        <h2>
+
+            <i class="fa-solid fa-wallet"></i>
+
+            Estimated Budget
+
+        </h2>
+
+        <div class="budget-row">
+
+            <span>Accommodation</span>
+
+            <span id="hotelBudget">
+
+                USD 0
+
+                <br>
+
+                <small>(Rs. 0)</small>
+
+            </span>
+
+        </div>
+
+        <div class="budget-row">
+
+            <span>Transportation</span>
+
+            <span id="transportBudget">
+
+                USD 0
+
+                <br>
+
+                <small>(Rs. 0)</small>
+
+            </span>
+
+        </div>
+
+        <div class="budget-row">
+
+            <span>Tour Guide</span>
+
+            <span id="guideBudget">
+
+                USD 0
+
+                <br>
+
+                <small>(Rs. 0)</small>
+
+            </span>
+
+        </div>
+
+        <div class="budget-row">
+
+            <span>Experiences</span>
+
+            <span id="experienceBudget">
+
+                USD 0
+
+                <br>
+
+                <small>(Rs. 0)</small>
+
+            </span>
+
+        </div>
+
+        <div class="budget-row">
+
+            <span>Estimated Flights</span>
+
+            <span id="flightBudget">
+
+                USD 420
+
+                <br>
+
+                <small>(Rs. 128,100)</small>
+
+            </span>
+
+        </div>
+
+        <hr>
+
+        <div class="total-budget">
+
+            <span>Total Budget</span>
+
+            <span id="totalBudget">
+
+                USD 0
+
+                <br>
+
+                <small>(Rs. 0)</small>
+
+            </span>
+
+        </div>
+
+        <p class="budget-footnote">
+
+            Travel agency fees are shown above but not
+            included in this total — agencies typically
+            quote a custom package price.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================== ACTION BUTTONS ===================== -->
+<section class="action-section">
+
+    <button id="editJourney">
+        <i class="fa-solid fa-pen-to-square"></i>
+        Edit Travel Partners
+    </button>
+
+    <button id="saveJourney">
+        <i class="fa-solid fa-floppy-disk"></i>
+        Confirm & Save Journey
+    </button>
+
+</section>
+
+<!-- ===================== SUCCESS MESSAGE ===================== -->
+
+<section id="saveMessage"
+         class="save-message">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <h2>
+
+        Journey Saved Successfully!
+
+    </h2>
+
+    <p>
+
+        Your personalized travel plan has been saved.
+
+        You can come back anytime to continue planning
+
+        your Sri Lankan adventure.
+
+    </p>
+
+    <button id="viewJourneyBtn">
+
+        <i class="fa-solid fa-book-open"></i>
+
+        View My Saved Journeys
+
+    </button>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+
+<footer>
+
+    <p>
+
+        © 2026 VISIT LANKA
+
+        | Smart Tourist Guide & Travel Planner
+
+    </p>
+
+</footer>
+
+<script src="../js/journey-planner.js"></script>
+
+</body>
+
+</html>

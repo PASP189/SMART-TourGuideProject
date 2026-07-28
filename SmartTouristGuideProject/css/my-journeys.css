@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#081524;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+nav{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 8%;
+
+    background:#09172a;
+
+    border-bottom:1px solid rgba(255,215,0,.15);
+
+}
+
+.logo{
+
+    font-size:34px;
+    font-weight:800;
+    color:white;
+
+}
+
+.logo span{
+
+    color:#FFD700;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+nav ul a{
+
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+
+}
+
+nav ul a:hover,
+nav ul .active{
+
+    color:#FFD700;
+
+}
+
+.hero{
+
+    height:280px;
+
+    background:
+    linear-gradient(rgba(8,21,36,.72),rgba(8,21,36,.82)),
+    url("../images/home.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    color:#FFD700;
+    font-size:55px;
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    width:70%;
+    margin:auto;
+
+    color:#ddd;
+    line-height:1.8;
+
+}
+
+.journey-container{
+
+    width:90%;
+    margin:70px auto;
+
+}
+
+.section-title{
+
+    margin-bottom:35px;
+
+}
+
+.section-title h2{
+
+    color:#FFD700;
+    font-size:36px;
+    margin-bottom:10px;
+
+}
+
+.section-title p{
+
+    color:#ccc;
+
+}
+
+.journey-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(360px,1fr));
+
+    gap:30px;
+
+}
+
+.journey-card{
+
+    background:#162844;
+
+    border:1px solid rgba(255,215,0,.15);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.journey-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#FFD700;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.card-header{
+
+    background:#1c3152;
+
+    padding:22px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.card-header h3{
+
+    color:#FFD700;
+
+}
+
+.status{
+
+    background:#2ecc71;
+
+    color:white;
+
+    padding:6px 16px;
+
+    border-radius:25px;
+
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.card-body{
+
+    padding:25px;
+
+}
+
+.card-body p{
+
+    margin-bottom:15px;
+    color:#ddd;
+
+}
+
+.destination-list{
+
+    margin:20px 0;
+
+}
+
+.destination-item{
+
+    background:#243a5a;
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+    border-radius:10px;
+
+}
+
+.budget{
+
+    font-size:30px;
+
+    color:#FFD700;
+
+    font-weight:700;
+
+    margin-top:20px;
+
+}
+
+.view-btn{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:#FFD700;
+
+    color:#081524;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.view-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(255,215,0,.35);
+
+}
+
+footer{
+
+    margin-top:70px;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#aaa;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}

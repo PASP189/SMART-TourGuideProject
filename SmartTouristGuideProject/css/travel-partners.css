@@ -1,0 +1,897 @@
+/*======================================
+        GOOGLE FONT
+=======================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*======================================
+        RESET
+=======================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/*======================================
+        BODY
+=======================================*/
+
+body{
+
+    background:#081524;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/*======================================
+        SCROLLBAR
+=======================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#091626;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:20px;
+
+}
+
+/*======================================
+        NAVBAR
+=======================================*/
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 9%;
+
+    background:rgba(8,18,36,.90);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(212,175,55,.15);
+
+}
+
+.logo{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#FFD700;
+
+    letter-spacing:2px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+nav a:hover,
+
+nav .active{
+
+    color:#FFD700;
+
+}
+
+/*======================================
+        HERO
+=======================================*/
+
+.hero{
+
+    height:420px;
+
+    background:
+
+    linear-gradient(
+
+    rgba(8,20,40,.75),
+
+    rgba(8,20,40,.85)
+
+    ),
+
+    url("../images/home.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-overlay{
+
+    width:80%;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+    0 0 25px rgba(255,215,0,.25);
+
+}
+
+.hero p{
+
+    width:70%;
+
+    margin:auto;
+
+    color:#ddd;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+/*======================================
+    SELECTED DESTINATIONS
+=======================================*/
+
+.destination-box{
+
+    width:90%;
+
+    margin:70px auto;
+
+    background:
+
+    rgba(18,35,60,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,215,0,.15);
+
+}
+
+.destination-box h2{
+
+    color:#FFD700;
+
+    margin-bottom:25px;
+
+    font-size:30px;
+
+}
+
+.selected-grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.selected-grid span{
+
+    background:#FFD700;
+
+    color:#081524;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+}
+
+/*======================================
+        CATEGORY SECTIONS
+=======================================*/
+
+.category-section{
+
+    width:90%;
+
+    margin:60px auto;
+
+}
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:12px;
+
+}
+
+.section-title i{
+
+    color:#FFD700;
+
+    font-size:26px;
+
+}
+
+.section-title h2{
+
+    color:#FFD700;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.section-description{
+
+    color:#bdbdbd;
+
+    margin-bottom:25px;
+
+    line-height:1.7;
+
+    font-size:14.5px;
+
+}
+
+.no-partners-msg{
+
+    color:#9a9a9a;
+
+    font-size:14px;
+
+    padding:18px 20px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px dashed rgba(255,215,0,.2);
+
+    border-radius:14px;
+
+}
+
+/*======================================
+        CARD GRID
+=======================================*/
+
+.partner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(255px,1fr));
+
+    gap:20px;
+
+}
+
+/*======================================
+        PARTNER CARD
+=======================================*/
+
+.partner-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:rgba(18,35,60,.82);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,215,0,.15);
+
+    transition:.3s;
+
+    box-shadow:
+
+    0 8px 22px rgba(0,0,0,.3);
+
+}
+
+.partner-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#FFD700;
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.5);
+
+}
+
+/*======================================
+        PREMIUM BADGE
+=======================================*/
+
+.partner-badge{
+
+    position:absolute;
+
+    top:12px;
+
+    left:12px;
+
+    background:#FFD700;
+
+    color:#081524;
+
+    padding:5px 12px;
+
+    border-radius:50px;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    z-index:100;
+
+    letter-spacing:.3px;
+
+}
+
+/*======================================
+        IMAGE
+=======================================*/
+
+.partner-card img{
+
+    width:100%;
+
+    height:140px;
+
+    object-fit:cover;
+
+}
+
+/*======================================
+        CARD CONTENT
+=======================================*/
+
+.partner-content{
+
+    padding:16px 18px 18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.partner-content h3{
+
+    color:#FFD700;
+
+    font-size:18px;
+
+    margin-bottom:6px;
+
+    line-height:1.3;
+
+}
+
+.partner-location{
+
+    color:#c8c8c8;
+
+    margin-bottom:10px;
+
+    font-size:12.5px;
+
+}
+
+.partner-description{
+
+    color:#c3c3c3;
+
+    line-height:1.5;
+
+    margin-bottom:12px;
+
+    font-size:13px;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+}
+
+/*======================================
+        RATING
+=======================================*/
+
+.partner-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-bottom:10px;
+
+    color:#FFD700;
+
+    font-weight:600;
+
+    font-size:13px;
+
+}
+
+/*======================================
+        FEATURES
+=======================================*/
+
+.partner-features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:6px;
+
+    margin-bottom:16px;
+
+}
+
+.partner-features span{
+
+    background:rgba(255,215,0,.12);
+
+    color:#FFD700;
+
+    padding:5px 10px;
+
+    border-radius:50px;
+
+    font-size:11px;
+
+}
+/*======================================
+            PRICE SECTION
+=======================================*/
+
+.partner-price{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:auto;
+
+    margin-bottom:14px;
+
+}
+
+.partner-price p{
+
+    color:#a9a9a9;
+
+    font-size:11.5px;
+
+}
+
+.partner-price h4{
+
+    color:#FFD700;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    text-align:right;
+
+}
+
+/*======================================
+        ADD TO PLAN BUTTON
+=======================================*/
+
+.add-plan-btn{
+
+    width:100%;
+
+    padding:11px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#FFD700,#f3b400);
+
+    color:#081524;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.add-plan-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 8px 18px rgba(255,215,0,.3);
+
+}
+
+.add-plan-btn.selected{
+
+    background:#2ecc71;
+
+    color:white;
+
+}
+
+/*======================================
+        GOLD SHINE
+=======================================*/
+
+.partner-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.2),
+
+    transparent
+
+    );
+
+    transition:.7s;
+
+    pointer-events:none;
+
+}
+
+.partner-card:hover::before{
+
+    left:150%;
+
+}
+
+/*======================================
+        SUMMARY SECTION
+=======================================*/
+
+.summary-section{
+
+    width:90%;
+
+    margin:90px auto;
+
+}
+
+.summary-section h2{
+
+    color:#FFD700;
+
+    margin-bottom:35px;
+
+    font-size:34px;
+
+}
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+.summary-card{
+
+    background:rgba(18,35,60,.80);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,215,0,.18);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.summary-card i{
+
+    color:#FFD700;
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+.summary-card h3{
+
+    margin-bottom:10px;
+
+    color:white;
+
+}
+
+.summary-card span{
+
+    color:#FFD700;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+/*======================================
+        CONTINUE BUTTON
+=======================================*/
+
+.continue-section{
+
+    width:90%;
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+#continuePlanner{
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#FFD700,#e5b300);
+
+    color:#081524;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#continuePlanner:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 15px 30px rgba(255,215,0,.35);
+
+}
+
+/*======================================
+        FOOTER
+=======================================*/
+
+footer{
+
+    margin-top:100px;
+
+    background:#05101d;
+
+    text-align:center;
+
+    padding:35px;
+
+    color:#bdbdbd;
+
+    border-top:1px solid rgba(255,215,0,.12);
+
+}
+
+/*======================================
+        RESPONSIVE
+=======================================*/
+
+@media(max-width:900px){
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    width:95%;
+
+}
+
+.partner-grid{
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+}
+
+.summary-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+nav{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.summary-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.partner-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+}
+
+.hero{
+
+    height:320px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+}
+
